@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "258964958221",
+    "firebase_url": "https://bd-voucher.firebaseio.com",
+    "project_id": "bd-voucher",
+    "storage_bucket": "bd-voucher.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:258964958221:android:142153f926e03005",
+        "android_client_info": {
+          "package_name": "com.bdone.asus.bdvoucher"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "258964958221-ann4fudvilt6qple0l29v5q2lmdl671q.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.asus.bdvoucher",
+            "certificate_hash": "a59550fc4c5babe60fb169c90bdad463bcf97dea"
+          }
+        },
+        {
+          "client_id": "258964958221-lrshm59oppaie3t1nj7ugjd6n1qilm00.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAjaoVIMU-jvMW2k5UjDPFyh1uEbjgrhNQ"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "258964958221-lrshm59oppaie3t1nj7ugjd6n1qilm00.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

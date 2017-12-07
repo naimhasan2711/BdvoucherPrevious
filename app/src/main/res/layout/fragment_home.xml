@@ -1,0 +1,615 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+  ~ Copyright (C) 2015 The Android Open Source Project
+  ~
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
+  ~
+  ~      http://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~ limitations under the License.
+  -->
+
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main_content"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#EBEBEB"
+
+        android:fitsSystemWindows="true"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+
+            android:elevation="2dp">
+
+
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:background="?attr/colorPrimary"
+                app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+                app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+
+            </android.support.v7.widget.Toolbar>
+
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="50dp">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginBottom="6dp"
+                    android:layout_marginTop="6dp"
+                    android:adjustViewBounds="true"
+                    android:src="@drawable/applogo" />
+
+
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/search"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="29dp"
+                android:padding="16dp"
+                android:src="@drawable/ic_search_white_24dp" />
+
+            <!--          <ImageView
+                          android:layout_width="wrap_content"
+                          android:layout_height="wrap_content"
+                          android:layout_alignParentRight="true"
+                          android:layout_centerVertical="true"
+                          android:layout_marginRight="83dp"
+                          android:src="@drawable/ic_notifications_none_white_24dp" />
+
+          -->
+        </RelativeLayout>
+
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#EBEBEB"
+            android:scrollbars="none">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/recyclerViewCategory"
+                    android:layout_width="match_parent"
+
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="16dp" />
+
+
+                <com.daimajia.slider.library.SliderLayout
+                    android:id="@+id/slider"
+                    android:layout_width="match_parent"
+                    android:layout_height="160dp"
+                    android:fitsSystemWindows="true" />
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="8dp"
+                    android:layout_marginTop="16dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Recommended Vouchers"
+                        android:textSize="18sp"
+
+                        android:textStyle="bold" />
+
+
+                </RelativeLayout>
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/recyclerViewRecomandedVoucher"
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:layout_marginTop="8dp" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="8dp"
+                    android:layout_marginTop="8dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Latest Vouchers"
+                        android:textSize="18sp"
+
+                        android:textStyle="bold" />
+
+
+                </RelativeLayout>
+
+
+                <android.support.v7.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:layout_marginTop="8dp"
+
+                    android:elevation="0dp"
+                    app:cardBackgroundColor="#2d9ded"
+                    app:cardUseCompatPadding="false">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="180dp"
+
+                        android:orientation="horizontal">
+
+
+                        <android.support.v7.widget.RecyclerView
+                            android:id="@+id/recylerViewEndingSoon"
+
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="16dp"
+
+                            />
+
+
+                    </LinearLayout>
+
+
+                </android.support.v7.widget.CardView>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="8dp"
+                    android:layout_marginTop="8dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Ending Soon"
+                        android:textSize="18sp"
+
+                        android:textStyle="bold" />
+
+
+                </RelativeLayout>
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/recyclerViewEndingSoon"
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:layout_marginTop="4dp" />
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:paddingBottom="4dp"
+                    android:paddingLeft="8dp"
+
+                    android:paddingRight="8dp"
+                    android:paddingTop="8dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Offer Nears You"
+                        android:textColor="#2d9ded"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/tv_more"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:text="Map.."
+                        android:textColor="#2d9ded"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
+
+                </RelativeLayout>
+
+                <HorizontalScrollView
+
+
+                    android:layout_width="match_parent"
+                    android:layout_height="160dp"
+                    android:layout_marginBottom="8dp"
+                    android:background="@drawable/map_back"
+                    android:paddingBottom="4dp"
+                    android:paddingTop="4dp"
+
+
+                    android:scrollbars="none">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+
+
+                        android:orientation="horizontal"
+                        android:paddingBottom="16dp"
+
+                        android:paddingTop="8dp">
+
+
+                        <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                            xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingLeft="60dp"
+                            card_view:cardElevation="1dp">
+
+                            <android.support.v7.widget.CardView
+
+                                style="@style/Widget.AppCompat.Button.Colored"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_margin=".5dp"
+                                android:foreground="?android:attr/selectableItemBackground"
+                                card_view:cardElevation="1dp"
+                                card_view:cardMaxElevation="0dp"
+                                card_view:cardUseCompatPadding="false">
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="vertical">
+
+                                    <ImageView
+
+                                        android:id="@+id/imageView2"
+                                        android:layout_width="160dp"
+                                        android:layout_height="110dp"
+                                        android:layout_gravity="center_horizontal"
+                                        android:layout_marginTop="8dp"
+                                        android:src="@drawable/mackdonalds" />
+
+                                    <TextView
+
+                                        android:id="@+id/textView"
+                                        android:layout_width="140dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center"
+                                        android:layout_marginBottom="8dp"
+                                        android:layout_marginTop="4dp"
+                                        android:gravity="center"
+                                        android:text="2 Steaks, a Bottle of Wine for £20 at Sizzling Pubs"
+                                        android:textColor="#cc222733"
+                                        android:textSize="12sp" />
+
+
+                                </LinearLayout>
+
+                            </android.support.v7.widget.CardView>
+
+                        </LinearLayout>
+
+                        <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                            xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="8dp"
+                            card_view:cardElevation="1dp">
+
+                            <android.support.v7.widget.CardView
+
+                                style="@style/Widget.AppCompat.Button.Colored"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_margin=".5dp"
+                                android:foreground="?android:attr/selectableItemBackground"
+                                card_view:cardElevation="1dp"
+                                card_view:cardMaxElevation="0dp"
+                                card_view:cardUseCompatPadding="false">
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="vertical">
+
+                                    <ImageView
+
+                                        android:layout_width="160dp"
+                                        android:layout_height="110dp"
+                                        android:layout_gravity="center_horizontal"
+                                        android:layout_marginTop="8dp"
+                                        android:src="@drawable/kfc" />
+
+                                    <TextView
+
+                                        android:layout_width="140dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center"
+                                        android:layout_marginBottom="8dp"
+                                        android:layout_marginTop="4dp"
+                                        android:gravity="center"
+                                        android:text="Go eat kfc regular drinks, up to 50% discount"
+                                        android:textColor="#cc222733"
+                                        android:textSize="12sp" />
+
+
+                                </LinearLayout>
+
+                            </android.support.v7.widget.CardView>
+
+                        </LinearLayout>
+
+                        <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                            xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="8dp"
+                            card_view:cardElevation="1dp">
+
+                            <android.support.v7.widget.CardView
+
+                                style="@style/Widget.AppCompat.Button.Colored"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_margin=".5dp"
+                                android:foreground="?android:attr/selectableItemBackground"
+                                card_view:cardElevation="1dp"
+                                card_view:cardMaxElevation="0dp"
+                                card_view:cardUseCompatPadding="false">
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="vertical">
+
+                                    <ImageView
+
+                                        android:layout_width="160dp"
+                                        android:layout_height="110dp"
+                                        android:layout_gravity="center_horizontal"
+                                        android:layout_marginLeft="2dp"
+                                        android:layout_marginRight="2dp"
+                                        android:layout_marginTop="8dp"
+                                        android:src="@drawable/disel" />
+
+                                    <TextView
+
+                                        android:layout_width="140dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center"
+                                        android:layout_marginBottom="8dp"
+                                        android:layout_marginTop="4dp"
+                                        android:gravity="center"
+                                        android:text="Get a huge discount on your products"
+                                        android:textColor="#cc222733"
+                                        android:textSize="12sp" />
+
+
+                                </LinearLayout>
+
+                            </android.support.v7.widget.CardView>
+
+                        </LinearLayout>
+
+
+                        <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                            xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="8dp"
+                            card_view:cardElevation="1dp">
+
+                            <android.support.v7.widget.CardView
+
+                                style="@style/Widget.AppCompat.Button.Colored"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_margin=".5dp"
+                                android:foreground="?android:attr/selectableItemBackground"
+                                card_view:cardElevation="1dp"
+                                card_view:cardMaxElevation="0dp"
+                                card_view:cardUseCompatPadding="false">
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="vertical">
+
+                                    <ImageView
+
+
+                                        android:layout_width="160dp"
+                                        android:layout_height="110dp"
+                                        android:layout_gravity="center_horizontal"
+                                        android:layout_marginTop="8dp"
+                                        android:src="@drawable/mackdonalds" />
+
+                                    <TextView
+
+                                    
+                                        android:layout_width="140dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center"
+                                        android:layout_marginBottom="8dp"
+                                        android:layout_marginTop="4dp"
+                                        android:gravity="center"
+                                        android:text="2 Steaks, a Bottle of Wine for £20 at Sizzling Pubs"
+                                        android:textColor="#cc222733"
+                                        android:textSize="12sp" />
+
+
+                                </LinearLayout>
+
+                            </android.support.v7.widget.CardView>
+
+                        </LinearLayout>
+
+                        <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                            xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="8dp"
+                            card_view:cardElevation="1dp">
+
+                            <android.support.v7.widget.CardView
+
+                                style="@style/Widget.AppCompat.Button.Colored"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_margin=".5dp"
+                                android:foreground="?android:attr/selectableItemBackground"
+                                card_view:cardElevation="1dp"
+                                card_view:cardMaxElevation="0dp"
+                                card_view:cardUseCompatPadding="false">
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="vertical">
+
+                                    <ImageView
+
+                                        android:layout_width="160dp"
+                                        android:layout_height="110dp"
+                                        android:layout_gravity="center_horizontal"
+                                        android:layout_marginTop="8dp"
+                                        android:src="@drawable/kfc" />
+
+                                    <TextView
+
+                                        android:layout_width="140dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center"
+                                        android:layout_marginBottom="8dp"
+                                        android:layout_marginTop="4dp"
+                                        android:gravity="center"
+                                        android:text="Go eat kfc regular drinks, up to 50% discount"
+                                        android:textColor="#cc222733"
+                                        android:textSize="12sp" />
+
+
+                                </LinearLayout>
+
+                            </android.support.v7.widget.CardView>
+
+                        </LinearLayout>
+
+                        <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                            xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="8dp"
+                            card_view:cardElevation="1dp">
+
+                            <android.support.v7.widget.CardView
+
+                                style="@style/Widget.AppCompat.Button.Colored"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_margin=".5dp"
+                                android:foreground="?android:attr/selectableItemBackground"
+                                card_view:cardElevation="1dp"
+                                card_view:cardMaxElevation="0dp"
+                                card_view:cardUseCompatPadding="false">
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="vertical">
+
+                                    <ImageView
+
+                                        android:layout_width="160dp"
+                                        android:layout_height="110dp"
+                                        android:layout_gravity="center_horizontal"
+                                        android:layout_marginLeft="2dp"
+                                        android:layout_marginRight="2dp"
+                                        android:layout_marginTop="8dp"
+                                        android:src="@drawable/disel" />
+
+                                    <TextView
+
+                                        android:layout_width="140dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center"
+                                        android:layout_marginBottom="8dp"
+                                        android:layout_marginTop="4dp"
+                                        android:gravity="center"
+                                        android:text="Get a huge discount on your products"
+                                        android:textColor="#cc222733"
+                                        android:textSize="12sp" />
+
+
+                                </LinearLayout>
+
+                            </android.support.v7.widget.CardView>
+
+                        </LinearLayout>
+                    </LinearLayout>
+
+
+                </HorizontalScrollView>
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/homeblocks"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="16dp"
+                    android:scrollbars="none" />
+
+
+            </LinearLayout>
+
+        </ScrollView>
+
+
+    </LinearLayout>
+
+
+</android.support.design.widget.CoordinatorLayout>

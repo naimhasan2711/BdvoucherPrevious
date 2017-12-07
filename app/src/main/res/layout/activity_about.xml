@@ -1,0 +1,94 @@
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main_content"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#EBEBEB"
+    android:fitsSystemWindows="true">
+
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#EBEBEB"
+        android:orientation="vertical">
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+
+            android:elevation="2dp">
+
+
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/toolbarForAbout"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:background="?attr/colorPrimary"
+                app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+                app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+
+            </android.support.v7.widget.Toolbar>
+
+
+
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="50dp">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginBottom="6dp"
+                    android:layout_marginTop="6dp"
+                    android:adjustViewBounds="true"
+                    android:src="@drawable/applogo" />
+
+            </RelativeLayout>
+
+
+
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#EBEBEB">
+
+            <!-- Login progress -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+
+                android:padding="16dp"
+                android:textColor="#ea6b6565"
+                android:text="Bdvoucher.com is a first voucher and discount based mobile application business in Bangladesh. Bdvoucher.com will inform you very sharply all the offers, discounts by near your place and you want purchase. People can save their money on local goods and services by using our mobile application. App-users can use their phone's GPS to locate nearby shops, restaurants, education, banking, fashions, electronics and other high street outlets offering discounts. To obtain the discount or offers they have to use bdvoucher.com mobile apps and get the voucher code. People can set a reminder for upcoming offers for them and they will get instant Push notification from the mobile apps."
+                android:textSize="16sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:padding="12dp"
+                android:layout_marginBottom="16dp"
+                android:textColor="#111111"
+                android:text="copyright reserved under BDVoucher.com"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentRight="true"
+                android:textSize="12sp" />
+
+
+        </RelativeLayout>
+
+
+    </LinearLayout>
+
+</android.support.design.widget.CoordinatorLayout>

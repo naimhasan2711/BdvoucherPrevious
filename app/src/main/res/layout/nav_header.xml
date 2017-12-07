@@ -1,0 +1,263 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+  ~ Copyright (C) 2015 The Android Open Source Project
+  ~
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
+  ~
+  ~      http://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~ limitations under the License.
+  -->
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+
+    android:gravity="bottom"
+    android:orientation="vertical"
+
+    android:theme="@style/ThemeOverlay.AppCompat.Dark">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="16dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="50dp">
+
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_centerVertical="true"
+            android:src="@drawable/profile_dummy_pic" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="12dp"
+
+            android:layout_toRightOf="@+id/imageView"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="User Name"
+                android:textColor="#262740"
+                android:id="@+id/profileName"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="User Mail Address"
+                android:textColor="#262740"
+                android:id="@+id/email"
+
+                android:textSize="15sp" />
+
+
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="#c9c5c5" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="2">
+<!--
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="60dp"
+
+            android:layout_weight="1">
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true">
+
+                <ImageView
+                    android:id="@+id/heartNav"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/heart" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_centerVertical="true"
+
+                    android:layout_marginLeft="2dp"
+                    android:layout_toRightOf="@+id/heartNav"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="18"
+
+                        android:textColor="#262740"
+                        android:textSize="9sp"
+                />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Your Choice"
+                        android:textColor="#262740"
+
+                        android:textSize="9sp" />
+
+
+                </LinearLayout>
+
+            </RelativeLayout>
+            <View
+                android:layout_width="1px"
+                android:layout_height="match_parent"
+                android:background="#c9c5c5"
+                android:layout_alignParentRight="true"/>
+
+
+
+        </RelativeLayout>-->
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="60dp"
+
+            android:layout_weight="1">
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true">
+
+                <ImageView
+                    android:id="@+id/heartNav2"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/star" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_centerVertical="true"
+
+                    android:layout_marginLeft="8dp"
+                    android:layout_toRightOf="@+id/heartNav2"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="12"
+                        android:textColor="#262740"
+                        android:textSize="9sp"
+                  />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Recent Offer"
+                        android:textColor="#262740"
+
+                        android:textSize="9sp" />
+
+
+                </LinearLayout>
+
+            </RelativeLayout>
+            <View
+                android:layout_width="1px"
+                android:layout_height="match_parent"
+                android:background="#c9c5c5"
+                android:layout_alignParentRight="true"/>
+
+
+
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="60dp"
+
+            android:layout_weight="1">
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true">
+
+                <ImageView
+                    android:id="@+id/heartNav3"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/importantfor" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_centerVertical="true"
+
+                    android:layout_marginLeft="8dp"
+                    android:layout_toRightOf="@+id/heartNav3"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="25"
+                        android:textColor="#262740"
+
+
+                        android:textSize="9sp"
+                 />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Upcomming"
+                        android:textColor="#262740"
+
+                        android:textSize="9sp" />
+
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+
+
+
+        </RelativeLayout>
+
+    </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="#c9c5c5"
+        android:layout_alignParentRight="true"/>
+</LinearLayout>

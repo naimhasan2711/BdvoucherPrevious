@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://C:\Users\bd\Desktop\bdvoucher\BdvoucherPrevious\Bd Voucher.iml" filepath="C:\Users\bd\Desktop\bdvoucher\BdvoucherPrevious\Bd Voucher.iml" />
+      <module fileurl="file://C:\Users\bd\Desktop\bdvoucher\BdvoucherPrevious\BdVoucher.iml" filepath="C:\Users\bd\Desktop\bdvoucher\BdvoucherPrevious\BdVoucher.iml" />
+      <module fileurl="file://$PROJECT_DIR$/BdvoucherPrevious.iml" filepath="$PROJECT_DIR$/BdvoucherPrevious.iml" />
+      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+    </modules>
+  </component>
+</project>
